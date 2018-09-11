@@ -3,7 +3,7 @@
 <form action="/songs/<%= @song.slug %>" method="post">
   <input type="hidden" id="hidden" name="_method" value="patch">
   <p>
-    <label for="song[name]">Name: </label><input type="text" name="song[name]" id="Name">
+    <label for="song[name]">Name: </label><input type="text" name="song[name]" id="Name" value="<%= @song.name %>">
   </p>
   <p>
     <label for="song[genre_ids][]">Genre: </label>
@@ -12,15 +12,9 @@
     <% end %>
   </p>
   <p>
-    <label for="song[artist_name]">Artist Name: </label><input type="text" name="song[artist_name]" id="Artist Name">
+    <label for="song[artist_name]">Artist Name: </label><input type="text" name="song[artist_name]" id="Artist Name" value="<%= @song.artist.name %>">
   </p>
   <p>
     <input type="submit" id="Create" value="Update">
   </p>
 </form>
-
-
-
-value="<%= @song.artist.name %>"
-
- value="<%= @song.name %>"
