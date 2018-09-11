@@ -49,7 +49,7 @@ class SongsController < ApplicationController
       @song.artist_id = Artist.find_by(name: params[:song]["artist_name"]).id
     end
     @song.save
-    flash[:message] = "Successfully created song."
+    flash[:message] = "Successfully updated song."
     redirect '/songs/' + @song.slug
   end
 
